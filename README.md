@@ -1,14 +1,8 @@
 # A Monthly Update
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/monthupdate?style=social)](https://twitter.com/monthupdate)
-
 This is a Python Twitter bot that automatically tweets a daily update with a progress bar showing how much of the current month has elapsed. The bot calculates the progress based on the current date and time zone, and uses the Twitter API to post a new tweet every day.
 
-## Live Twitter Feed
-
 Tweets by [@monthupdate](https://twitter.com/monthupdate)
-
-<a class="twitter-timeline" data-lang="en" data-theme="dark" href="https://twitter.com/MonthUpdate?ref_src=twsrc%5Etfw">Tweets by MonthUpdate</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Table of Contents
 
@@ -25,7 +19,7 @@ To use this bot, you'll need:
 
 - Python 3.x
 - A Twitter developer account and API keys
-- [Requriements File](requirements.txt)
+- [Requirements File](requirements.txt)
 
 ## Installation
 
