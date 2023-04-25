@@ -1,1 +1,1 @@
-# monthly-updates
+# a-monthly-update
