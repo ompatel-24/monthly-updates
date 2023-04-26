@@ -3,10 +3,12 @@ name: Tweet
 on:
   schedule:
     - cron: '38 21 * * *' # At 00:00
-
+  push:
+    branches:
+      - 'main'
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
 
       - name: checkout repo content
