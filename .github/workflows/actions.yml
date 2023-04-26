@@ -2,7 +2,7 @@ name: Tweet
 
 on:
   schedule:
-    - cron: '35 18 * * *' # At 00:00
+    - cron: '8 19 * * *' # At 00:00
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       - name: install python packages
         run: |
           python3 -m pip install --upgrade pip
-          pip freeze > requirements. txt
+          pip freeze > requirements.txt
           pip install -r requirements.txt
 
       - name: execute py script # run main.py
