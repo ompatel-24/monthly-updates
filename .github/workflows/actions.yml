@@ -2,7 +2,7 @@ name: Tweet
 
 on:
   schedule:
-    - cron: '0 20 * * *' # At 00:00
+    - cron: '5 20 * * *' # At 00:00
 
 jobs:
   build:
@@ -19,12 +19,11 @@ jobs:
           python3 -m pip install --upgrade pip
           pip freeze > requirements.txt
           pip install -r requirements.txt
-
-      - name: run python script # runs main.py
-        uses: actions/checkout@v3
         env:
           consumer_key: ${{ secrets.CONSUMER_KEY }}
           consumer_secret: ${{ secrets.CONSUMER_SECRET }}
           access_token: ${{ secrets.ACCESS_TOKEN }}
           access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
+
+      - uses: actions/checkout@v3
       - run: python3 main.py
