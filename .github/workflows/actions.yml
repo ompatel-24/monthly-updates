@@ -25,12 +25,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: run python script
+        uses: actions/checkout@v3
         with:
           consumer_key: ${{ secrets.CONSUMER_KEY }}
           consumer_secret: ${{ secrets.CONSUMER_SECRET }}
           access_token: ${{ secrets.ACCESS_TOKEN }}
           access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: python3 main.py
+      - run: python3 main.py
 
       - name: commit files
         run: |
