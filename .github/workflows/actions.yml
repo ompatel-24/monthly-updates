@@ -2,7 +2,7 @@ name: Tweet
 
 on:
   schedule:
-    - cron: '40 5 * * *' # At 00:00
+    - cron: '45 5 * * *' # At 00:00
 
 jobs:
   build:
