@@ -2,7 +2,7 @@ name: Tweet
 
 on:
   schedule:
-    - cron: '15 20 * * *' # At 00:00
+    - cron: '25 20 * * *' # At 00:00
 
 jobs:
   build:
@@ -15,9 +15,9 @@ jobs:
           python-version: '3.10' # install the python version needed
 
       - name: install python packages
-        run: |
+        uses: actions/checkout@v3
+      - run: |
           python3 -m pip install --upgrade pip
-          pip freeze > requirements.txt
           pip install -r requirements.txt
         env:
           consumer_key: ${{ secrets.CONSUMER_KEY }}
