@@ -20,10 +20,11 @@ jobs:
           pip freeze > requirements.txt
           pip install -r requirements.txt
 
-      - name: execute py script # run main.py
+      - name: run python script # runs main.py
+        uses: actions/checkout@v3
         env:
           consumer_key: ${{ secrets.CONSUMER_KEY }}
           consumer_secret: ${{ secrets.CONSUMER_SECRET }}
           access_token: ${{ secrets.ACCESS_TOKEN }}
           access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
-        run: python3 main.py
+      - run: python3 main.py
